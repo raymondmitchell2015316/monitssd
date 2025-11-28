@@ -656,15 +656,15 @@ func getAdminTemplate() string {
                 
                 const sessionsList = document.getElementById('sessions-list');
                 if (data.sessions && data.sessions.length > 0) {
-                    sessionsList.innerHTML = data.sessions.map(session => 
-                        `<div class="session-item">
-                            <div>
-                                <strong>Session ID:</strong> ${session.session_id}<br>
-                                <small>Message ID: ${session.message_id || 'N/A'}</small>
-                            </div>
-                            <span style="color: #10b981;">✓ Processed</span>
-                        </div>`
-                    ).join('');
+                    sessionsList.innerHTML = data.sessions.map(function(session) {
+                        return '<div class="session-item">' +
+                            '<div>' +
+                            '<strong>Session ID:</strong> ' + session.session_id + '<br>' +
+                            '<small>Message ID: ' + (session.message_id || 'N/A') + '</small>' +
+                            '</div>' +
+                            '<span style="color: #10b981;">✓ Processed</span>' +
+                            '</div>';
+                    }).join('');
                 } else {
                     sessionsList.innerHTML = '<p style="color: #666; text-align: center; padding: 20px;">No sessions processed yet</p>';
                 }
