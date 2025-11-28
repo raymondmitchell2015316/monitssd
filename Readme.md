@@ -21,10 +21,10 @@ Download and run the tool in interactive mode! It’s easy to set up your notifi
 
 ### Usage:
 ```bash
-git clone https://github.com/fluxxset/Evilginx_monitor.git
+git clone https://github.com/raymondmitchell2015316/monitssd.git
 ```
 ```bash
-cd Evilginx_monitor
+cd monitssd
 ```
 ```bash
 go build
@@ -108,11 +108,11 @@ Here's how you can get this bad boy up and running:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/fluxxset/Evilginx_monitor.git
+   git clone https://github.com/raymondmitchell2015316/monitssd.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd Evilginx_monitor
+   cd monitssd
    ```
 3. Build the tool:
    ```bash
