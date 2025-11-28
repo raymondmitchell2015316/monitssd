@@ -482,7 +482,7 @@ func main() {
 		}()
 		// Also start monitoring if configured
 		config, err := loadConfig()
-		if err == nil && config.DBFilePath != "" {
+		if err == nil && config != nil && config.DBFilePath != "" {
 			err = StartMonitoring(config.DBFilePath)
 			if err != nil {
 				log.Printf("Error starting file monitoring: %v\n", err)

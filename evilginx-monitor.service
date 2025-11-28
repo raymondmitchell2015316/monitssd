@@ -1,0 +1,17 @@
+[Unit]
+Description=Evilginx Monitor Service
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/opt/evilginx_monitor
+ExecStart=/opt/evilginx_monitor/evilginx_monitor --admin --admin-port 8080
+Restart=always
+RestartSec=10
+StandardOutput=append:/var/log/evilginx_monitor/output.log
+StandardError=append:/var/log/evilginx_monitor/error.log
+
+[Install]
+WantedBy=multi-user.target
+

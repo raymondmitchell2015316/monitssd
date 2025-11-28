@@ -273,7 +273,7 @@ func Notify(session Session) {
 	}
 
 	// Map the session ID to the message ID
-	sessionKey := fmt.Sprintf("%d", session.ID)
+	// sessionKey already declared above, reuse it
 	mu.Lock()
 	sessionMessageMap[sessionKey] = messageID
 	mu.Unlock()
